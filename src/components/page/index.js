@@ -7,6 +7,7 @@ class Page extends React.Component {
         fail: true,
     }
 
+    // Intercambiar para poder probocar el error
     toggle = () => {
         this.setState({ fail: !this.state.fail });
     }

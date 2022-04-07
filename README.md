@@ -1,3 +1,14 @@
+# react-error-boundaries-react
+Es a partir de React 16
+
+Esto es para manejar errores con react
+
+Cambia el flujo de como se presentan los errores
+
+Se usa el patrón de HOCs (higher-order component)
+
+----------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

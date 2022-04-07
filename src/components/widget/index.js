@@ -4,6 +4,7 @@ import { withError } from '../error';
 
 class Widget extends React.Component {
     render() {
+        // Si entra falla, porque está llamando a una func que no existe
         if (this.props.fail) {
             this.a();
         }
@@ -24,5 +25,5 @@ class Widget extends React.Component {
         );
     }
 }
-
+// Se está aplicando HOC (High Order Component)
 export default withError(Widget);

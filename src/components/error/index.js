@@ -6,8 +6,10 @@ export class ErrorComponent extends React.Component {
         hasError: false,
         message: '',
     }
-
-    componentDidCatch(error) {
+    
+    //static getDerivedStateFromError(error) // Se puede usar cualquiera de los 2, para interactuar con los errores
+    // Para insectar errores
+    componentDidCatch(error) { 
         this.setState({
             hasError: true,
             message: error.message,
@@ -27,6 +29,7 @@ export class ErrorComponent extends React.Component {
     }
 }
 
+// Esto es un HOC (High Order Component)
 export const withError = (Component) => {
     class ErrorComponent extends React.Component {
         state = {
@@ -68,6 +71,7 @@ export const withError = (Component) => {
         }
     }
 
+    // .displayName = Es para que salga el nombre correcto en las herramientas de desarrollo
     ErrorComponent.displayName = `withError(${Component.displayName || Component.name})`;
 
     return ErrorComponent;
